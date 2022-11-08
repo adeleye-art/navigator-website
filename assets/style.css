@@ -1,0 +1,376 @@
+/*general*/
+body {
+  overflow-x: hidden;
+  color: #fff;
+  background-color: #020312;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-y: visible;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin: 0;
+  width: 20rem;
+}
+
+.pos {
+  position: relative;
+  display: block;
+}
+.block {
+  /* display: block; */
+  padding: 0.44rem;
+}
+.text-align {
+  text-align: right;
+}
+
+/********************************* */
+
+/**  Top-header Animation *****/
+
+.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(109, 21, 163, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(239, 114, 123, 1) 100%
+  );
+  background-size: 200% 200%;
+  height: 20px;
+  animation: gradient 30s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/********************************* */
+
+/*******Header************ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #3c16dc;
+  padding: 1rem 2rem 1rem 2rem;
+  color: #e6dfdf;
+  position: relative;
+  flex-grow: 1;
+}
+.nav-open .main-nav {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/********************************* */
+
+/*************Main-nav(menu ) ******************** */
+
+.main-nav {
+  display: flex;
+  background: rgb(254, 246, 243, 1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 42rem;
+  width: 90vw;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+
+  transform: translateX(100%);
+
+  transition: all 0.5s;
+  opacity: 0;
+  /* z-index: 999; */
+  pointer-events: none;
+  visibility: hidden;
+}
+.main-nav-list {
+  list-style: none;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.main-nav1 {
+  padding: 3rem 4rem;
+  position: relative;
+}
+.sub-nav {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+.note {
+  background-color: #3c16dc;
+  border-style: solid;
+  border-width: 14px;
+  border-color: orange;
+  display: flex;
+  flex-shrink: 1;
+  padding: 3rem 2rem;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.note2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  /* gap: 1rem; */
+}
+
+/**************Button******************* */
+
+.btn-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  color: #e6dfdf;
+}
+
+.icon-bar-nav {
+}
+.icon-bar-nav[name="close"] {
+  display: none;
+}
+.nav-open .icon-bar-nav[name="close"] {
+  display: block;
+}
+.nav-open .icon-bar-nav[name="open"] {
+  display: none;
+}
+.btn-nav {
+  z-index: 999;
+  font-size: 20px;
+}
+.btn {
+  color: black;
+  margin-bottom: 2rem;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.button {
+  background-color: #000;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  color: #fff;
+}
+/********************************* */
+/************Links and icons********************* */
+
+a {
+  text-decoration: none;
+}
+.main-nav-list a {
+  font-family: p22-mackinac-pro, sans-serif;
+  font-weight: 900;
+}
+.main-nav-list a:link {
+  text-decoration: none;
+}
+.main-nav-list a:visited {
+  color: #000;
+  text-decoration: none;
+}
+.main-nav-list a:hover {
+  color: #3c18ff;
+  text-decoration: underline;
+}
+.main-nav-list a:active {
+  color: #000;
+  text-decoration: none;
+}
+.main-nav-list a:focus {
+  color: #3c18ff;
+  text-decoration: underline;
+}
+.sub-nav a {
+  color: #3c18fe;
+}
+.sub-nav a:link {
+  text-decoration: none;
+}
+.sub-nav a:visited {
+  text-decoration: none;
+}
+.sub-nav a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.sub-nav a:active {
+  color: #000;
+  text-decoration: none;
+}
+.sub-nav a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+.icon-nav {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 0.5rem;
+  position: absolute;
+  right: 4rem;
+  bottom: 0rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 600;
+  /* width: 40px;
+  height: 140px; */
+}
+.icon-nav a {
+  color: #3c18fe;
+}
+.icon-nav a:link {
+  text-decoration: none;
+}
+.icon-nav a:visited {
+}
+.icon-nav a:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: orange;
+  border-radius: 6px;
+  color: orange;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+.icon-nav a:active {
+}
+.icon-nav a:focus {
+}
+
+/* responsive css */
+@media (max-width: 27rem) {
+  .icon-text {
+    display: none !important;
+  }
+  .font-size {
+    margin-bottom: 2rem;
+  }
+  .sub-nav {
+    flex-direction: column;
+  }
+
+  .icon-nav {
+    gap: 0.5rem;
+    justify-content: flex-start;
+    grid-auto-flow: column;
+    margin: -0.25rem;
+    font-weight: 600px;
+    font-size: 1.5rem;
+    position: static;
+    padding: 0;
+  }
+  .p-hero {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 90rem) {
+  .p-hero {
+    font-size: 0.3rem;
+  }
+}
+.stick .header1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-size: 20px;
+  background-color: #fff;
+}
+.header1 {
+  display: none;
+}
+.main-nav2 {
+  display: flex;
+  width: 60rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-nav-list1 {
+  display: flex;
+  width: 35rem;
+  justify-content: space-evenly;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: #000;
+}
+a:visited {
+}
+a:hover {
+  color: #775ce7;
+}
+a:focus {
+}
+.font-size {
+  font-size: 0.7rem;
+}
+
+.p-hero {
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+  /* padding: 3rem 0; */
+}
